@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\repos\\ExampleGraphQL\\ExampleGraphQL\\ExampleGraphQL\\ExampleGraphQL.csproj": {}
+    "E:\\Repos\\ExampleGraphQL\\ExampleGraphQL.csproj": {}
   },
   "projects": {
-    "D:\\repos\\ExampleGraphQL\\ExampleGraphQL\\ExampleGraphQL\\ExampleGraphQL.csproj": {
+    "E:\\Repos\\ExampleGraphQL\\ExampleGraphQL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\repos\\ExampleGraphQL\\ExampleGraphQL\\ExampleGraphQL\\ExampleGraphQL.csproj",
+        "projectUniqueName": "E:\\Repos\\ExampleGraphQL\\ExampleGraphQL.csproj",
         "projectName": "ExampleGraphQL",
-        "projectPath": "D:\\repos\\ExampleGraphQL\\ExampleGraphQL\\ExampleGraphQL\\ExampleGraphQL.csproj",
+        "projectPath": "E:\\Repos\\ExampleGraphQL\\ExampleGraphQL.csproj",
         "packagesPath": "C:\\Users\\Daniel\\.nuget\\packages\\",
-        "outputPath": "D:\\repos\\ExampleGraphQL\\ExampleGraphQL\\ExampleGraphQL\\obj\\",
+        "outputPath": "E:\\Repos\\ExampleGraphQL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -42,6 +42,32 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "GraphQL": {
+              "target": "Package",
+              "version": "[3.3.2, )"
+            },
+            "GraphQL.Server.Transports.AspNetCore": {
+              "target": "Package",
+              "version": "[4.4.1, )"
+            },
+            "GraphQL.Server.Transports.AspNetCore.SystemTextJson": {
+              "target": "Package",
+              "version": "[4.4.1, )"
+            },
+            "GraphQL.Server.Ui.Playground": {
+              "target": "Package",
+              "version": "[4.4.1, )"
+            },
+            "Microsoft.AspNetCore.Razor.Design": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "MongoDB.Driver": {
+              "target": "Package",
+              "version": "[2.12.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
