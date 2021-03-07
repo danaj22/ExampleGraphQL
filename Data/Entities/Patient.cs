@@ -17,7 +17,7 @@ namespace ExampleGraphQL.Data.Entities
         public string FirstName { get; set; }
         [StringLength(10)]
         public string LastName { get; set; }
-        public ProductType Type { get; set; }
+        public Gender Gender { get; set; }
         public string Pesel { get; set; }
 
         [Column(TypeName = "decimal(18,2)")]

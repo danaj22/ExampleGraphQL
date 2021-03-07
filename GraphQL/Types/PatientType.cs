@@ -15,14 +15,12 @@ namespace ExampleGraphQL.GraphQL.Types
             Field(t => t.FirstName).Description("Imię pacjenta (max 10 znaków)");
             Field(t => t.LastName).Description("Nazwisko pacjenta (max 10 znaków)");
             Field(t => t.Pesel).Description("Pesel musi być!");
-            Field(t)
             Field(t => t.IntroducedAt).Description("When the product was first introduced in the catalog");
             Field(t => t.PhotoFileName).Description("The file name of the photo so the client can render it");
             Field(t => t.Price);
             Field(t => t.NfzBranch).Description("The (max 5) star customer rating");
             Field(t => t.Stock);
-            Field<ProductTypeEnumType>("Type", "The type of product");
-
+            Field<PatientGenderType>("Gender", "Płeć pacjenta.");
         }
     }
 }

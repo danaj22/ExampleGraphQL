@@ -28,7 +28,6 @@ namespace ExampleGraphQL
 
         public IConfiguration Configuration { get; }
 
-        // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
@@ -37,14 +36,12 @@ namespace ExampleGraphQL
             services.AddSingleton<GraphQLSchema>();
             services.AddSingleton<GraphQLQuery>();
             services.AddSingleton<PatientType>();
-            services.AddSingleton<ProductTypeEnumType>();
+            services.AddSingleton<PatientGenderType>();
             services.AddGraphQL().AddSystemTextJson()
                 .AddGraphTypes(ServiceLifetime.Scoped);
 
-
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             

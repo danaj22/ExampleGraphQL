@@ -11,7 +11,7 @@ namespace ExampleGraphQL.GraphQL
         public GraphQLQuery(PatientRepository patientRepository)
         {
             Field<ListGraphType<PatientType>>(
-                "Products",
+                "patients",
                 resolve: context => patientRepository.GetAll()
             );
         }

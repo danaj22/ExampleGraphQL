@@ -14,14 +14,12 @@ namespace ExampleGraphQL.Repositories
         public PatientRepository()
         {
             _client = new MongoClient("mongodb://localhost:27017");
-            // Poniżej podaj nazwę utworzonej przez siebie w poprzednim kroku bazy danych
             _database = _client.GetDatabase("GraphQL");
-
         }
 
         public IEnumerable<Patient> GetAll()
         {
-            return _database.GetCollection<Patient>("Products").Find(_ => true).ToEnumerable();
+            return _database.GetCollection<Patient>("patients").Find(_ => true).ToEnumerable();
         }
     }
 }

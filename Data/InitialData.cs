@@ -17,7 +17,7 @@ namespace ExampleGraphQL.Data
             _client = new MongoClient("mongodb://localhost:27017");
             // Poniżej podaj nazwę utworzonej przez siebie w poprzednim kroku bazy danych
             _database = _client.GetDatabase("GraphQL");
-            var data = _database.GetCollection<Patient>("Products");
+            var data = _database.GetCollection<Patient>("patients");
             var count = data.EstimatedDocumentCount();
             if(count > 0)
             {
@@ -31,7 +31,7 @@ namespace ExampleGraphQL.Data
                 Pesel = "64091361956",
                 Price = 219.5m,
                 NfzBranch = 4,
-                Type = ProductType.Boots,
+                Gender = Gender.Female,
                 Stock = 12,
                 PhotoFileName = "shutterstock_66842440.jpg",
                 IntroducedAt = DateTimeOffset.Now.AddMonths(-1)
@@ -45,7 +45,7 @@ namespace ExampleGraphQL.Data
                 Pesel = "50100861287",
                 Price = 125.9m,
                 NfzBranch = 3,
-                Type = ProductType.Boots,
+                Gender = Gender.Female,
                 Stock = 56,
                 PhotoFileName = "shutterstock_222721876.jpg",
                 IntroducedAt = DateTimeOffset.Now.AddMonths(-1)
@@ -59,7 +59,7 @@ namespace ExampleGraphQL.Data
                 Pesel = "74060834792",
                 Price = 199.99m,
                 NfzBranch = 5,
-                Type = ProductType.ClimbingGear,
+                Gender = Gender.Male,
                 Stock = 66,
                 PhotoFileName = "shutterstock_6170527.jpg",
                 IntroducedAt = DateTimeOffset.Now.AddMonths(-1)
@@ -73,7 +73,7 @@ namespace ExampleGraphQL.Data
                 Pesel = "61111813549",
                 Price = 299.5m,
                 NfzBranch = 5,
-                Type = ProductType.ClimbingGear,
+                Gender = Gender.Male,
                 Stock = 3,
                 PhotoFileName = "shutterstock_48040747.jpg",
                 IntroducedAt = DateTimeOffset.Now.AddMonths(-1)
@@ -87,7 +87,7 @@ namespace ExampleGraphQL.Data
                 Pesel = "56030919241",
                 Price = 350m,
                 NfzBranch = 5,
-                Type = ProductType.Kayaks,
+                Gender = Gender.Other,
                 Stock = 8,
                 PhotoFileName = "shutterstock_441989509.jpg",
                 IntroducedAt = DateTimeOffset.Now.AddMonths(-1)
@@ -101,7 +101,7 @@ namespace ExampleGraphQL.Data
                 Pesel = "62062729334",
                 Price = 450m,
                 NfzBranch = 2,
-                Type = ProductType.Kayaks,
+                Gender = Gender.Other,
                 Stock = 1,
                 PhotoFileName = "shutterstock_495259978.jpg",
                 IntroducedAt = DateTimeOffset.Now.AddMonths(-1)

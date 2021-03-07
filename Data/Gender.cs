@@ -5,10 +5,11 @@ using System.Threading.Tasks;
 
 namespace ExampleGraphQL.Data
 {
-    public enum ProductType
+    public enum Gender
     {
-        Boots,
-        ClimbingGear,
-        Kayaks
+        Female,
+        Male,
+        Other,
+        Undefined
     }
 }

@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace ExampleGraphQL.GraphQL.Types
 {
-    public class ProductTypeEnumType : EnumerationGraphType<Data.ProductType>
+    public class PatientGenderType : EnumerationGraphType<Data.Gender>
     {
-        public ProductTypeEnumType()
+        public PatientGenderType()
         {
-            Name = "Type";
-            Description = "The type of product";
+            Name = "Gender";
+            Description = "Płeć pacjenta";
         }
     }
 }
